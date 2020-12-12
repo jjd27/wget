@@ -268,6 +268,7 @@ static struct cmdline_option option_data[] =
     { "adjust-extension", 'E', OPT_BOOLEAN, "adjustextension", -1 },
     { "append-output", 'a', OPT__APPEND_OUTPUT, NULL, required_argument },
     { "ask-password", 0, OPT_BOOLEAN, "askpassword", -1 },
+    { "assume-texthtml", 0, OPT_BOOLEAN, "assumetexthtml", -1 },
     { "auth-no-challenge", 0, OPT_BOOLEAN, "authnochallenge", -1 },
     { "background", 'b', OPT_BOOLEAN, "background", -1 },
     { "backup-converted", 'K', OPT_BOOLEAN, "backupconverted", -1 },
@@ -671,6 +672,9 @@ Download:\n"),
     N_("\
        --no-use-server-timestamps  don't set the local file's timestamp by\n\
                                      the one on the server\n"),
+    N_("\
+       --no-assume-texthtml        don't assume text/html where Content-Type\n\
+                                     is not specified\n"),
     N_("\
   -S,  --server-response           print server response\n"),
     N_("\

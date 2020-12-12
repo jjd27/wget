@@ -878,6 +878,15 @@ Turn on time-stamping.  @xref{Time-Stamping}, for details.
 Do not send If-Modified-Since header in @samp{-N} mode. Send preliminary HEAD
 request instead. This has only effect in @samp{-N} mode.
 
+@item --no-assume-texthtml
+Don't assume MIME type text/html when @code{Content-Type} is not specified.
+
+By default, when a file is downloaded, if the @code{Content-Type} header is not
+provided, the file is assumed to be of MIME type @samp{text/html}. This is
+often a sensible choice when CGI-generated content omits this header. However,
+it is sometimes preferable to not make this assumption, such as when
+recursively downloading non-HTML files.
+
 @item --no-use-server-timestamps
 Don't set the local file's timestamp by the one on the server.
 
@@ -3690,6 +3699,11 @@ Set all applicable timeout values to @var{n}, the same as @samp{-T
 
 @item timestamping = on/off
 Turn timestamping on/off.  The same as @samp{-N} (@pxref{Time-Stamping}).
+
+@item assume_texthtml = on/off
+If set to @samp{off}, Wget won't assume MIME type text/html for downloaded
+files when the @code{Content-Type} header is not provided (same as
+@samp{--no-assume-texthtml}).
 
 @item use_server_timestamps = on/off
 If set to @samp{off}, Wget won't set the local file's timestamp by the

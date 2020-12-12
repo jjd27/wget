@@ -322,6 +322,9 @@ struct options
   int ftp_stmlf;                /* Force Stream_LF format for binary FTP. */
 #endif /* def __VMS */
 
+  bool assume_texthtml;         /* Assume text/html where Content-Type is
+                                   not specified. */
+
   bool useservertimestamps;     /* Update downloaded files' timestamps to
                                    match those on server? */
 

@@ -140,6 +140,7 @@ static const struct {
   { "adjustextension",  &opt.adjust_extension,  cmd_boolean },
   { "alwaysrest",       &opt.always_rest,       cmd_boolean }, /* deprecated */
   { "askpassword",      &opt.ask_passwd,        cmd_boolean },
+  { "assumetexthtml",   &opt.assume_texthtml,   cmd_boolean },
   { "authnochallenge",  &opt.auth_without_challenge,
                                                 cmd_boolean },
   { "background",       &opt.background,        cmd_boolean },
@@ -484,6 +485,7 @@ defaults (void)
   opt.locale = NULL;
   opt.encoding_remote = NULL;
 
+  opt.assume_texthtml = true;
   opt.useservertimestamps = true;
   opt.show_all_dns_entries = false;
 
